@@ -1,0 +1,366 @@
+* { 
+	box-sizing: border-box; /* 박스 사이즈 기준 */
+    margin : 0; /* 전체 마진 제거 */
+}
+
+body {
+    background: #ffffff;
+    padding: 0;
+	font: 100%/1.6 "맑은고딕"; /* 폰트 크기,줄 간격, 폰트 */
+    text-size-adjust: none; /* 텍스트 설정 고정 */
+}
+
+.wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    border-bottom: 0.5px solid #CCC;
+    list-style-type: none;
+}
+
+.wrapper label{
+    position:absolute;
+    right:0;
+    padding : 0;
+    font-size : 30px;
+}
+
+.wrapper label:hover{
+    color: #CCC;
+}
+
+#toggle{
+    display: none;
+}
+
+.nav {
+    display: none;
+}
+
+#btn_top.active {
+    display: block;
+}
+
+.btn_fix {
+    position: fixed;
+    z-index: 100;
+    bottom: 6px;
+    right: 6px;
+    width: 44px;
+    font-size: 1em;
+    line-height: 0;
+}
+
+#btn_top {
+    display: none;
+    width: 44px;
+    height: 44px;
+    background: none;
+    padding: 0;
+    border: 0;
+}
+
+#toggle:checked + .nav{
+    display:inline;
+    position: absolute;
+    right: 0;
+    z-index: 9999;
+    margin-right: 20px;
+}
+
+.nav li {
+    background: #fff;
+    font-size : 20px;
+    padding: 15px;
+    border: 0.1px solid #CCC;
+}
+
+footer {
+    border-top : 0.5px solid #CCC;
+    text-align: center;
+    width: 100%;
+    height: 100%; 
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.fot-text, footer p, .fot-text a {
+    color: #888;
+    margin: 5px 10px 10px 5px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+ul { 
+	list-style: none; /* 머릿글자 없애기 */
+    margin : 0;
+	padding: 0;
+} 
+
+a {
+	color: #000000;        /* 텍스트 검정 */
+	text-decoration: none; /* a 태그 밑줄 제거 */
+}
+
+a:hover {  
+	color: #888888; /* 텍스트에 마우스 이동시 */
+}
+
+.decTitle h3 {
+    font-size: 1.8em;
+}
+
+.decTxt h4 {
+    font-size : 1.5em;
+}
+
+
+.decTxt p { 
+    color : #888888;
+    font-size : 1.1em;
+}
+
+.banner{
+    text-align: center;
+    top: 0;
+    width: auto;
+}
+
+.banList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.banImg{
+    display: none;
+}
+
+.banImg, .banImg img{
+    width: 100%;
+    max-width: 1920px;
+    height: 250px
+}
+
+.banTxt{
+    position: absolute;
+    color: #FFF;
+    text-shadow: 1px 1px 1px black;
+}
+
+.banTxt h2{
+    font-size:1.5em;
+}
+
+.banTxt h1{
+    font-size:2.5em;
+}
+
+.dot0, .dot1, .dot2 {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot1:hover, .dot2:hover {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .7
+    } 
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .7
+    } 
+    to {
+        opacity: 1
+    }
+}
+
+.decSlide1, .decSlide2 {
+    display: none;
+}
+
+.foot-text {
+    
+}
+
+/* 작은 크기 */
+.decTitle {
+    padding: 15px 0px 15px 12px;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.decide li {
+    border-top: 0.5px solid #CCC;
+    border-bottom: 0.25px solid #DDD;
+    display: table;
+    padding : 5px 5px 5px 5px;
+}
+
+.decList {
+    display: table-row;         
+}
+
+.decImg {
+    display: table-cell; 
+    vertical-align: middle;
+    width: 50%;
+    height: auto;
+    padding-right: 16px;
+}
+
+.decImg img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.decTxt {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.decBtn {
+    text-align:center; 
+    margin-bottom: 20px;
+}
+
+/* 중간 크기 */
+@media all and (min-width: 40em) {
+    #btn_top.active {
+    display: none;
+    }
+    
+    .wrapper h1{
+        margin-right: auto;
+    }
+    .wrapper label {
+        display: none;
+    }
+    
+    .nav {
+        position :relative;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #toggle:checked + .nav {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+    }
+    
+    .nav li {
+        border: 0;
+    }
+    
+    .banImg, .banImg img{
+        height: 500px;
+        max-height: 100%;  
+    }
+    .banList{
+        margin-bottom: 100px;   
+    }
+    
+    .decTitle {
+        padding: 10px 10px 0 16px;
+        max-width: 1120px;
+        margin: 0 auto;
+    }
+    .decide {
+        padding: 8px;
+        max-width: 1120px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .decide li {
+        display: block;
+        float: left;
+        padding: 8px;
+        width: 50%;
+        border-bottom: 0.5px solid #CCC;
+    }
+    .decList {
+        display: block;
+    }
+    
+    .decImg, .decTxt, .decList {
+        display: block;
+        width: auto;
+        padding: 0;
+    }
+    
+    .banTxt h2{
+        font-size:45px;
+    }
+
+    .banTxt h1{
+        font-size:100px;
+    }
+    
+    .decTxt {
+        padding: 8px 0;
+    }
+    
+    .banTxt h2{
+        font-size:2.5em;
+    }
+
+    .banTxt h1{
+        font-size:3.5em;
+    }
+    
+    .decBtn {
+        text-align: center; 
+        margin-bottom: 60px;
+    }
+}
+
+@media all and (min-width: 60em) {
+    btn_top.active {
+    display: none;
+    }
+    .banImg, .banImg img{
+        height: 800px;
+    }
+    .decide li {
+        width: 25.0%; /* 줄별 비율 */
+    }
+    
+    .banTxt h2{
+        font-size:3.5em;
+    }
+
+    .banTxt h1{
+        font-size:4.5em;
+    }
+}
