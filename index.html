@@ -1,20 +1,290 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
-    <title>Welcome</title>
+    <link rel="stylesheet" href="css/mainStyle.css">
+    <script type="text/javascript" src="mainScript.js"></script>
 </head>
-<body>
-   <h1>목록</h1>
-   <ul>
-       <li>메뉴1</li>
-           <ul>
-               <li>메뉴1-1</li>
-               <li>메뉴1-2</li>
-               <li>메뉴1-3</li>
-           </ul>
-       <li>메뉴2</li>
-       <li>메뉴3</li>
-   </ul> 
+<body onload="showSlides(1,1);showSlides(1,2);timeSlides();">
+<header>
+    <div class="wrapper">
+        <h1>SOLVER</h1>
+        
+        <label for="toggle"><b>&#8801;</b></label>
+        <input type="checkbox" id="toggle">
+        <ul class="nav">
+            <li><a href="#"><b>메인</b></a></li>
+            <li><a href="#"><b>맛집 검색</b></a></li>
+            <li><a href="#"><b>리뷰</b></a></li>
+            <li><a href="#"><b>고객 센터</b></a></li>
+            <li><a href="#"><b>마이 페이지</b></a></li>
+        </ul>
+    </div>
+</header>    
+<div class="banner">
+    <div class= "banList">
+        <div class="banImg fade">
+            <img src="img/banner1.jpg">
+        </div>
+        <div class="banImg fade">
+            <img src="img/banner2.jpg">
+        </div>
+        <div class="banImg fade">
+            <img src="img/banner3.jpg">
+        </div>
+        <div class="banTxt">
+            <h2>"서울의 모든 맛집은 이곳에서"</h2>
+            <h1>Solver</h1>
+        </div>
+    </div>
+</div>
+    
+<!-- 연령. 성별 기준 최고 선호도 -->
+<div class="decTitle">
+    <h3 class='txt-title'>맞춤 추천 메뉴</h2>
+</div>
+    
+<div class="decSlide1 fade">
+    <ul class="decide">
+        <li>
+            <a href="#" class="decList">
+                <div class="decImg">
+                    <img src="img/10M.jpg"/>
+                </div>
+                <div class="decTxt">
+                    <h4 class="txt-head">10대 남자</h4>
+                    <p class="txt-body">햄버거</p>
+                    <p class="txt-body">평점 4.5점</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="decList">
+                <div class="decImg">
+                    <img src="img/20M.jpg"/>
+                </div>
+                <div class="decTxt">
+                    <h4 class="txt-head">20대 남자</h4>
+                    <p class="txt-body">피자</p>
+                    <p class="txt-body">평점 4.7점</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="decList">
+                <div class="decImg">
+                    <img src="img/30M.jpg"/>
+                </div>
+                <div class="decTxt">
+                    <h4 class="txt-head">30대 남자</h4>
+                    <p class="txt-body">스테이크</p>
+                    <p class="txt-body">평점 4.1점</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="decList">
+                <div class="decImg">
+                    <img src="img/40M.jpg"/>
+                </div>
+                <div class="decTxt">
+                    <h4 class="txt-head">40대 남자</h4>
+                    <p class="txt-body">부대찌개</p>
+                    <p class="txt-body">평점 4.0점</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+    
+<div class="decSlide1 fade">
+    <ul class="decide">
+        <li>
+            <a href="#" class="decList">
+                <div class="decImg">
+                    <img src="img/10F.jpg"/>
+                </div>
+                <div class="decTxt">
+                    <h4 class="txt-head">10대 여자</h4>
+                    <p class="txt-body">햄버거</p>
+                    <p class="txt-body">평점 4.5점</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="decList">
+                <div class="decImg">
+                    <img src="img/20F.jpg"/>
+                </div>
+                <div class="decTxt">
+                    <h4 class="txt-head">20대 여자</h4>
+                    <p class="txt-body">피자</p>
+                    <p class="txt-body">평점 4.7점</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="decList">
+                <div class="decImg">
+                    <img src="img/30F.jpg"/>
+                </div>
+                <div class="decTxt">
+                    <h4 class="txt-head">30대 여자</h4>
+                    <p class="txt-body">스테이크</p>
+                    <p class="txt-body">평점 4.1점</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="decList">
+                <div class="decImg">
+                    <img src="img/40F.jpg"/>
+                </div>
+                <div class="decTxt">
+                    <h4 class="txt-head">40대 여자</h4>
+                    <p class="txt-body">부대찌개</p>
+                    <p class="txt-body">평점 4.0점</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+    
+<div style="text-align:center">
+  <span class="dot1" onclick="showSlides(1,1)"></span> 
+  <span class="dot1" onclick="showSlides(2,1)"></span> 
+</div>
+    
+<!-- 연령. 성별 기준 최다 선택 -->
+<div class="decTitle">
+    <h3 class='txt-title'>최다 선택 메뉴</h2>
+</div>
+    
+<div class="decSlide2 fade">
+    <ul class="decide">
+        <li>
+            <a href="#" class="decList">
+                <div class="decImg">
+                    <img src="img/M10.jpg"/>
+                </div>
+                <div class="decTxt">
+                    <h4 class="txt-head">10대 남자</h4>
+                    <p class="txt-body">초밥</p>
+                    <p class="txt-body">총 240명</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="decList">
+                <div class="decImg">
+                    <img src="img/M20.jpg"/>
+                </div>
+                <div class="decTxt">
+                    <h4 class="txt-head">20대 남자</h4>
+                    <p class="txt-body">불고기</p>
+                    <p class="txt-body">총 186명</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="decList">
+                <div class="decImg">
+                    <img src="img/M30.jpg"/>
+                </div>
+                <div class="decTxt">
+                    <h4 class="txt-head">30대 남자</h4>
+                    <p class="txt-body">김치찌개</p>
+                    <p class="txt-body">총 211명</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="decList">
+                <div class="decImg">
+                    <img src="img/M40.jpg"/>
+                </div>
+                <div class="decTxt">
+                    <h4 class="txt-head">40대 남자</h4>
+                    <p class="txt-body">순대국</p>
+                    <p class="txt-body">총 488명</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+    
+<div class="decSlide2 fade">
+    <ul class="decide">
+        <li>
+            <a href="#" class="decList">
+                <div class="decImg">
+                    <img src="img/F10.jpg"/>
+                </div>
+                <div class="decTxt">
+                    <h4 class="txt-head">10대 여자</h4>
+                    <p class="txt-body">초밥</p>
+                    <p class="txt-body">총 240명</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="decList">
+                <div class="decImg">
+                    <img src="img/F20.jpg"/>
+                </div>
+                <div class="decTxt">
+                    <h4 class="txt-head">20대 여자</h4>
+                    <p class="txt-body">불고기</p>
+                    <p class="txt-body">총 186명</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="decList">
+                <div class="decImg">
+                    <img src="img/F30.jpg"/>
+                </div>
+                <div class="decTxt">
+                    <h4 class="txt-head">30대 여자</h4>
+                    <p class="txt-body">김치찌개</p>
+                    <p class="txt-body">총 211명</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="decList">
+                <div class="decImg">
+                    <img src="img/F40.jpg"/>
+                </div>
+                <div class="decTxt">
+                    <h4 class="txt-head">40대 여자</h4>
+                    <p class="txt-body">순대국</p>
+                    <p class="txt-body">총 488명</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+    
+<div class="decBtn">
+  <span class="dot2" onclick="showSlides(1,2)"></span> 
+  <span class="dot2" onclick="showSlides(2,2)"></span> 
+</div>
+
 </body>
+<footer>
+    <div class="fot-text">
+        <a href="#"> 이용약관 </a>
+        <a href="#"> 개인정보취급방침 </a>
+        <a href="#"> 사이트맵 </a>
+        <a href="#"> 고객센터 </a>
+    </div>
+    <div class="fot-text">
+        <a>대표자 : 김동형 </a>
+        <a>개인정보담당자 : xpdlajcm@gmail.com </a>
+        <a>제휴 문의 : caper0724@digitide.co.kr</a>
+        <a>서울시 구로구 고척동 경인로 445</a>
+    </div>
+    <p> Copyright&copy; 2019 www.solver.com. All Rights Reserverd </p>
+</footer>
 </html>
